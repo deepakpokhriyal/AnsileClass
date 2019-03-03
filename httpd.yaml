@@ -11,6 +11,10 @@
      copy:
       src: /myansiblecode/index.html
       dest: /var/www/html
+      notify:
+       - restart httpd
+      tags:
+       - H
 
    - name: This task will be used to start service
      service:
@@ -23,3 +27,8 @@
       state: restarted
       tags:
        - R
+  handlers:
+    - name: restart httpd
+      service:
+        name: httpd
+        state: restarted

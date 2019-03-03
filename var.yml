@@ -1,0 +1,9 @@
+---
+- name: this playbook will be used for variables
+  hosts: test
+  vars_files:
+   - vars.yml
+  tasks:
+  - debug:
+      msg: "{{age}}"
+
