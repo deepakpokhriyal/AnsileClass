@@ -7,4 +7,9 @@
       name: httpd
       state: latest
 
+   - name: This task will copy index.html
+     copy:
+      src: /myansiblecode/index.html
+      dest: /var/www/html
+
  
