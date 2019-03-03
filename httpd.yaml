@@ -16,3 +16,8 @@
      service:
       name: httpd
       state: started
+   
+   - name: This will be used for restart
+     service: 
+      name: httpd
+      state: restarted
